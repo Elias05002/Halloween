@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Disfraces de Halloween</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        body a{
+            
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #000;
+        }
+
+        header {
+            background: #333;
+            padding: 10px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('img/fondo-halloween.jpg') no-repeat center center/cover;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            text-align: center;
+            margin: 20px;
+            flex: 1 1 calc(33.333% - 40px); /* 3 productos por fila */
+        }
+
+        /* Ajuste responsivo */
+        @media (max-width: 768px) {
+            .producto {
+                flex: 1 1 calc(50% - 40px); /* 2 productos por fila en tablet */
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .hero img {
+                width: 200px;
+                height: 200px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .producto {
+                flex: 1 1 100%; /* 1 producto por fila en móviles */
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .hero img {
+                width: 150px;
+                height: 150px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+
+        /* Estilos de animación */
+        @keyframes tambaleo {
+            0% {
+                transform: rotate(2deg);
+            }
+            25% {
+                transform: rotate(-2deg);
+            }
+            50% {
+                transform: rotate(2deg);
+            }
+            75% {
+                transform: rotate(-2deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Aplicar efectos a las imágenes de los productos */
+        .producto img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            animation: tambaleo 1s infinite;
+        }
+
+        h1, p {
+            font-family: 'Creepster', cursive;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+            font-family: 'Creepster', cursive;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logoindex {
+            animation: tambaleo 1s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Halloween 🎃</div>
+            <div class="logo" style="font-size: 25px;">
+                <a href="#intro">Intro</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#seccion">Opiniones</a>
+                <a href="#about">Acerca de</a>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+   
+    
+    <section class="hero" id="intro">
+        <h1>Halloween con Cheems</h1>
+        <img class="logoindex" src="img/cheem3.jpg" alt="cheemsito" width="250px" height="250px">
+        <p style="font-size: 50px;">¡Disfraces terroríficamente geniales!</p>
+        <button onclick="document.location='#catalogo'">Ir al catálogo</button>
+    </section>
+
+    <section id="catalogo">
+        <h1>Catálogo de Disfraces</h1>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/vampiro3.gif" alt="Disfraz de vampiro">
+                <h2>Vampiro</h2>
+                <p>¡Prepárate para chupar... todo el jugo de las fiestas! Solo evita el ajo y los espejos. 🍷🦇</p>
+                $250
+                Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/bruja3.gif" alt="Disfraz de bruja">
+                <h2>Bruja</h2>
+                <p>La magia negra te espera con este atuendo. 🧙‍♀️</p>
+                $100 Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/fantasma3.gif" alt="Disfraz de fantasma">
+                <h2>Fantasma</h2>
+                <p>¡Buuuu! Asusta a todos con este clásico espeluznante. 👻</p>
+                $150
+                Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/momia.gif" alt="Disfraz de momia">
+                <h2>Momia</h2>
+                <p>Con este disfraz de momia, serás la sensación de la fiesta. 🧻</p>
+                $200
+                Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/calabaza2.gif" alt="Disfraz de calabaza">
+                <h2>Calabaza</h2>
+                <p>Este disfraz te hará sentir como el centro de la cosecha... y de la pista de baile. 🎃 </p>
+                $300
+                Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/diablito3.gif" alt="Disfraz de diablito" width="500">
+                <h2>Diablito</h2>
+                <p>Este disfraz de diablito te dará el toque perfecto para causar un poquito de caos.😈</p>
+                $70
+            </div>
+            <div class="producto">
+                <img src="img/dinoamigo.gif" alt="Disfraz de dinosaurio">
+                <h2>Dinosaurio</h2>
+                <p>Con este disfraz de dinosaurio, serás el más feroz en la fiesta. 😱</p>
+                $350
+                Tallas: XS, S, M, G
+            </div>
+            <div class="producto">
+                <img src="img/hada2.gif" alt="Disfraz de hada">
+                <h2>Hada</h2>
+                <p>¡Una pizca de polvo de hadas y a volar! ✨</p>
+                $200
+                Tallas: XS, S, M, G
+            </div>
+        </div>
+
+    </section>
+
+    <section id="seccion">
+        <h2 style=" font-family: 'Creepster', cursive;">Opiniones de Clientes</h2>
+        <div class="productos">
+         <div class="opinion">
+             <p>"Los disfraces son de excelente calidad y llegaron súper rápido. ¡Totalmente recomendados!"</p>
+             <p>- Ana García</p>
+         </div>
+         
+         <div class="opinion">
+             <p>"Las decoraciones hicieron que mi fiesta de Halloween fuera épica. Volveré a comprar el próximo año."</p>
+             <p>- Carlos Rodríguez</p>
+         </div>
+         
+         <div class="opinion">
+             <p>"Muy buenos precios y gran variedad. Conseguí todo lo que necesitaba para Halloween."</p>
+             <p>- María Pérez</p>
+         </div>
+         
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>&copy; 2024 Halloween con Cheems. Todos los derechos reservados.</p>
+      
+        <p>Universidad Tecnológica del Norte de Aguascalientes</p>
+    </footer>
+
+</body>
+</html>
